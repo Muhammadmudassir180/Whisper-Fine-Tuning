@@ -6,8 +6,8 @@ The project is designed to make adapting Whisper to custom datasets and low-reso
 
 ## Features
 
-- **LoRA Fine-Tuning:** Parameter-efficient training with fewer trainable parameters and lower memory requirements.
-- **Full Fine-Tuning:** Update the model's parameters for greater flexibility when adapting to a target language or domain.
+- **LoRA Fine-Tuning:** Parameter-efficient training with fewer trainable parameters and lower memory requirements. Recommended for low resource language when the dataset is not huge and have a limited VRAM of GPU. 
+- **Full Fine-Tuning:** Update the model's parameters for greater flexibility when adapting to a target language or domain. This is recommended when the dataset is very huge, Lora is not improving the model generalization capability and have an ample amount of GPU or VRAM.  
 - **Custom Datasets:** Adapt the pipelines to your own speech datasets.
 - **Configurable Training:** Customize model selection, training parameters, and dataset paths.
 - **ASR Evaluation:** Evaluate model performance using Word Error Rate (WER).
@@ -17,17 +17,13 @@ The project is designed to make adapting Whisper to custom datasets and low-reso
 ### 1. Clone the Repository
 
 ```bash
-git clone <YOUR_REPOSITORY_URL>
-cd <YOUR_REPOSITORY_NAME>
+git clone https://github.com/Muhammadmudassir180/Whisper-Fine-Tuning.git
+cd Whisper-Fine-Tuning
 ```
 
 ### 2. Install Dependencies
 
-Create and activate a Python virtual environment, then install the required dependencies:
-
-```bash
-pip install -r requirements.txt
-```
+Dependencies will be automatically installed by running the 2nd cell of python notebook
 
 ### 3. Prepare Your Dataset
 
@@ -47,7 +43,6 @@ Update the relevant configuration settings, including:
 
 Run the training script corresponding to your preferred approach
 
-*Replace the script names with the actual filenames in your repository.*
 
 ## Choosing a Pipeline
 
@@ -60,12 +55,7 @@ Run the training script corresponding to your preferred approach
 
 ## Customization
 
-You can adapt the pipelines to different languages, domains, and speech datasets by updating the configuration and dataset preparation steps.
+You can adapt the pipelines to different languages, domains, and speech datasets by updating the configuration and dataset preparation steps. Multiple languages are supported in this pipeline. 
 
-## License
-
-Check the licenses of the pretrained model, datasets, and dependencies before using this project. Add your repository's license here.
-
----
 
 **Contributions and feedback are welcome!**
